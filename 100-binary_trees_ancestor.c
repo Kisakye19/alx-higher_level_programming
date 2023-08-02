@@ -7,7 +7,8 @@
  * Return: pointer to the LCA || NULL on failure
  */
 
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+		const binary_tree_t *second)
 {
 	const binary_tree_t *leftLCA, *rightLCA;
 
