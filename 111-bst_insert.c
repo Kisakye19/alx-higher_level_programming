@@ -11,25 +11,42 @@
  * Return: pointer to the created node || NULL on failure
  */
 
+
 bst_t *bst_insert(bst_t **tree, int value)
 {
-	if (tree == NULL)
-		return (NULL);
+	bst_t *new, *tree_2;
 
-	if (*tree == NULL)
+	if (tree == NULL || *tree == NULL)
 	{
-		*tree = binary_tree_node(NULL, value);
-		return (*tree);
+		new = binary_tree_node(NULL, value);
+		*tree = new;
+		return (new);
 	}
 
-	if ((*tree)->n == value)
-		return (NULL);
+	tree_2 = *tree;
 
-	if (value < (*tree)->n)
-		return (bst_insert(&((*tree)->left), value));
-
-	if (value > (*tree)->n)
-		return (bst_insert(&((*tree)->right), value));
-
+	while (tree_2 != NULL)
+	{
+		if (tree_2->n == value)
+			return (NULL);
+		if (tree_2->n > value)
+		{
+			if (tree_2->left == NULL)
+			{
+				tree_2->left = binary_tree_node(tree_2, value);
+				return (tree_2->left);
+			}
+			tree_2 = tree_2->left;
+		}
+		if (tree_2->n < value)
+		{
+			if (tree_2->right == NULL)
+			{
+				tree_2->right = binary_tree_node(tree_2, value);
+				return (tree_2->right);
+			}
+			tree_2 = tree_2->right;
+		}
+	}
 	return (NULL);
 }
