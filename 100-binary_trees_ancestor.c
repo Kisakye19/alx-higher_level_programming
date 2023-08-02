@@ -9,19 +9,11 @@
 
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
 {
-	binary_tree_t *leftLCA, *rightLCA;
+	const binary_tree_t *leftLCA, *rightLCA;
 
-	if (first == NULL || second == NULL)
-		return (NULL);
-
-	if (first == second)
-		return (first);
-
-	leftLCA = binary_trees_ancestor(first->left, second);
-	rightLCA = binary_trees_ancestor(first->right, second);
-
-	if (leftLCA != NULL && rightLCA != NULL)
-		return (first);
-
-	return ((leftLCA != NULL) ? leftLCA : rightLCA);
+	for (leftLCA = first; leftLCA; leftLCA = leftLCA->parent)
+		for (rightLCA = second; rightLCA; rightLCA = rightLCA->parent)
+			if (leftLCA == rightLCA)
+				return ((binary_tree_t *)leftLCA);
+	return (NULL);
 }
