@@ -1,5 +1,6 @@
-
-dule for append_after method.
+#!/usr/bin/python3
+"""
+Module for append_after method.
 """
 
 

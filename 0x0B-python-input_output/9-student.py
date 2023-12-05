@@ -1,5 +1,6 @@
-
-dule for class Student.
+#!/usr/bin/python3
+"""
+    Module for class Student.
 """
 
 

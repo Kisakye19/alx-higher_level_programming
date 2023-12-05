@@ -1,4 +1,6 @@
-dd_item module
+#!/usr/bin/python3
+"""
+7-add_item module
 """
 import sys
 import json

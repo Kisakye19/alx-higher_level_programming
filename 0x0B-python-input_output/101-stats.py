@@ -1,5 +1,6 @@
-
-dule for log parsing scripts.
+#!/usr/bin/python3
+"""
+Module for log parsing scripts.
 """
 
 

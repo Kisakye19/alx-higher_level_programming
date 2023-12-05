@@ -1,5 +1,6 @@
-
-dule for pascal_triangle method.
+#!/usr/bin/python3
+"""
+Module for pascal_triangle method.
 """
 
 
