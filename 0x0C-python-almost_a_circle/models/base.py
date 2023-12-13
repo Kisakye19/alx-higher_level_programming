@@ -1,5 +1,4 @@
-se.py
-# Brennan D Baraban <375@holbertonschool.com>
+#!/usr/bin/python3
 """Defines a base model class."""
 import json
 import csv

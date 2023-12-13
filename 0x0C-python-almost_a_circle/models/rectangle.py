@@ -1,5 +1,4 @@
-
-# en D Baraban <375@holbertonschool.com>
+#!/usr/bin/python3
 """Defines a rectangle class."""
 from models.base import Base
 
@@ -156,4 +155,4 @@ class Rectangle(Base):
         """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
-                                                       self.width, self.height)eb-src http://archive.ubuntu.com/ubuntu/ trusty multiverse
+                                                       self.width, self.height)

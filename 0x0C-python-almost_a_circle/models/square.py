@@ -1,5 +1,4 @@
-quare.py
-# Brennan D Baraban <375@holbertonschool.com>
+#!/usr/bin/python3
 """Defines a square class."""
 from models.rectangle import Rectangle
 
