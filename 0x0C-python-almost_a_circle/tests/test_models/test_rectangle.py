@@ -1,5 +1,4 @@
-t_rectangle.py
-# Brennan D Baraban <375@holbertonschool.com>
+#!/usr/bin/python3
 """Defines unittests for models/rectangle.py.
 
 Unittest classes:
